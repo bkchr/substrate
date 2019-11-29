@@ -9,5 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Install latest nightly
+      uses: actions-rs/toolchain@v1
+      with:
+          toolchain: nightly
+          override: true
+          target: wasm32-unknown-unknown
     - name: Test all2
       run: cargo test --all --release --verbose
