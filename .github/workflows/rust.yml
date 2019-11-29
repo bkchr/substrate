@@ -9,5 +9,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Test all
+    - name: Test all2
       run: cargo test --all --release --verbose
